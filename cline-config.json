@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "file-finder-mcp": {
+      "args": [
+        "--host", "localhost",
+        "--port", "8000"
+      ],
+      "command": "python",
+      "scriptPath": "server.py",
+      "autoApprove": [],
+      "disabled": false
+    }
+  }
+} 

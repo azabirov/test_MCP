@@ -1,0 +1,4 @@
+# No external dependencies required for basic functionality
+# The server uses only Python standard library 
+# Client requires requests library
+requests>=2.25.1 

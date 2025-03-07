@@ -1,23 +1,12 @@
-# File Finder MCP for Cline
+# File Finder MCP Server
 
-This repository contains a Model Context Protocol (MCP) server implementation for finding files in the file system. The MCP server integrates with Cline in VSCode to provide file search capabilities.
+A Model Context Protocol (MCP) server for finding files in the file system by path fragment. This server integrates with Cline in VSCode to provide file search capabilities.
 
 ## Features
 
 - Find files in the file system by path fragment
 - Returns file name, path, size, and creation date
 - Easy integration with Cline in VSCode
-
-## Project Structure
-
-- `file-finder-mcp/` - The MCP server implementation
-  - `server.py` - The main MCP server implementation
-  - `client.py` - A test client for the MCP server
-  - `requirements.txt` - Python dependencies
-  - `setup.py` - Package installation script
-  - `cline-config.json` - Configuration for Cline integration
-  - `README.md` - Detailed documentation
-  - `.gitignore` - Git ignore file
 
 ## Installation
 
@@ -28,7 +17,7 @@ This repository contains a Model Context Protocol (MCP) server implementation fo
 
 ### Steps
 
-1. Navigate to the MCP directory:
+1. Clone the repository:
 
 ```bash
 cd file-finder-mcp
@@ -60,6 +49,20 @@ Or with custom host and port:
 
 ```bash
 python server.py --host 127.0.0.1 --port 8080
+```
+
+### Testing with the Client
+
+The repository includes a test client that you can use to verify the server is working:
+
+```bash
+python client.py "search_term"
+```
+
+For example, to search for all Python files:
+
+```bash
+python client.py ".py"
 ```
 
 ### Integrating with Cline in VSCode
